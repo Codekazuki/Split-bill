@@ -9,8 +9,8 @@ function App() {
     <div className='app'>
       <div className='sidebar'>
         <FriendList />
-        <Button>Add Friend</Button>
         <FormAddFriend />
+        <Button>Add Friend</Button>
       </div>
       <FormSplit />
     </div>
