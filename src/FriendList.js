@@ -46,6 +46,7 @@ function Friend({ friend }) {
         </p>
       )}
       {friend.balance === 0 && <p>You are even</p>}
+      <button className='button'>select</button>
     </li>
   );
 }
