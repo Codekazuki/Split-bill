@@ -6,7 +6,7 @@ import FriendList from "./FriendList";
 
 function App() {
   return (
-    <div className='App'>
+    <div className='app'>
       <div className='sidebar'>
         <FriendList />
         <Button>Add Friend</Button>
