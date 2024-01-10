@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./Button";
 const initialFriends = [
   {
     id: 118836,
@@ -46,7 +47,7 @@ function Friend({ friend }) {
         </p>
       )}
       {friend.balance === 0 && <p>You are even</p>}
-      <button className='button'>select</button>
+      <Button>Selected</Button>
     </li>
   );
 }
