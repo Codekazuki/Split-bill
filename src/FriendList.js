@@ -1,16 +1,16 @@
 import React from "react";
 import Button from "./Button";
 
-const FriendList = ({ friends }) => {
+const FriendList = ({ friends, onSelection }) => {
   return (
     <ul>
       {friends.map((friend) => (
-        <Friend friend={friend} key={friend.id} />
+        <Friend friend={friend} key={friend.id} onSelection={onSelection} />
       ))}
     </ul>
   );
 };
-function Friend({ friend }) {
+function Friend({ friend, onSelection }) {
   return (
     <li>
       <img src={friend.image} alt={friend.name} />
@@ -26,7 +26,7 @@ function Friend({ friend }) {
         </p>
       )}
       {friend.balance === 0 && <p>You are even</p>}
-      <Button>Select</Button>
+      <Button onClick={() => onSelection(friend)}>Select</Button>
     </li>
   );
 }
