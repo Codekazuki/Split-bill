@@ -44,13 +44,17 @@ function App() {
   return (
     <div className='app'>
       <div className='sidebar'>
-        <FriendList friends={friends} onSelection={handleSelection} />
+        <FriendList
+          friends={friends}
+          onSelection={handleSelection}
+          selectedFriend={selectedFriend}
+        />
         {showAddFriend && <FormAddFriend onAddFriend={handleAddFriend} />}
         <Button onClick={handleShowAddPerson}>
           {showAddFriend ? "close" : "add person"}
         </Button>
       </div>
-      {selectedFriend && <FormSplit />}
+      {selectedFriend && <FormSplit selectedFriend={selectedFriend} />}
     </div>
   );
 }
