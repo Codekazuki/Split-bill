@@ -2,6 +2,9 @@ import React from "react";
 import Button from "./Button";
 
 const FormSplit = () => {
+  function handleSplitBill(e) {
+    e.preventDefault();
+  }
   return (
     <form className='form-split-bill'>
       <h2>split bill with X</h2>
@@ -16,7 +19,7 @@ const FormSplit = () => {
         <option value='user'>Me</option>
         <option value='friend'>X</option>
       </select>
-      <Button>Split bill</Button>
+      <Button onSubmit={handleSplitBill}>Split bill</Button>
     </form>
   );
 };

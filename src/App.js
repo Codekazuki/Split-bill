@@ -32,11 +32,14 @@ function App() {
   function handleShowAddPerson() {
     setshowAddFriend((show) => !show);
   }
+  function handleAddFriend(friend) {
+    setFriends((friends) => [...friends, friend]);
+  }
   return (
     <div className='app'>
       <div className='sidebar'>
         <FriendList friends={friends} />
-        {showAddFriend && <FormAddFriend />}
+        {showAddFriend && <FormAddFriend onAddFriend={handleAddFriend} />}
         <Button onClick={handleShowAddPerson}>
           {showAddFriend ? "close" : "add person"}
         </Button>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Button from "./Button";
 
-const FormAddFriend = () => {
+const FormAddFriend = ({ onAddFriend }) => {
   const [name, setName] = useState("");
   const [image, setImage] = useState("https://i.pravatar.cc/48?u=118836");
   function handleSubmit(e) {
@@ -16,11 +16,15 @@ const FormAddFriend = () => {
     };
     setName("");
     setImage("https://i.pravatar.cc/48?u=118836");
-    console.log(newFriend);
+    onAddFriend(newFriend);
   }
 
   return (
-    <form className='form-add-friend' onSubmit={handleSubmit}>
+    <form
+      className='form-add-friend'
+      onSubmit={handleSubmit}
+      nAddFriend={onAddFriend}
+    >
       <label>👩🏿‍🤝‍👩🏿Friend name</label>
       <input
         value={name}
