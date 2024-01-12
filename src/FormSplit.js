@@ -42,7 +42,7 @@ const FormSplit = ({ selectedFriend, onSplitBill }) => {
         value={whoIsPayingBill}
         onChange={(e) => setWhoIsPayingBill(e.target.value)}
       >
-        <option value='user'>Me</option>
+        <option value='user'>You</option>
         <option value={selectedFriend.name}>{selectedFriend.name}</option>
       </select>
       <Button onSubmit={handleSplitBill}>Split bill</Button>
